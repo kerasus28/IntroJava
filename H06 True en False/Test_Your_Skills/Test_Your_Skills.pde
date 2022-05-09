@@ -1,5 +1,5 @@
 float Lengte = 1.81;
-float Gewicht = 85;
+float Gewicht = 200;
 int Leeftijd = 21;
 float BMI = 0;
 
@@ -33,8 +33,24 @@ BMI = (int) BMI;
 BMI /= 10;
 //println(BMI);
 
-text("BMI =  " + BMI , 550,375);
+//text("BMI =  " + BMI , 550,375);
 
+ if(BMI < 18.5){
+   fill(255,255,0);
+ }else if(BMI < 25){
+   fill(0,255,0);
+ }else if (BMI < 30){
+   fill(255,165,0);
+ }else if (BMI < 35){
+   fill(255,0,0);
+ }else if (BMI > 35){
+   fill(255,12,63);
+
+ }else{
+ 
+ }
+ 
+text("BMI =  " + BMI , 550,375);
 
 
 
