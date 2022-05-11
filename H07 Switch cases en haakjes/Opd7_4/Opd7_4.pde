@@ -1,4 +1,4 @@
-int dag = 1;
+int dag = 7;
 
 switch(dag){
   case 1:
