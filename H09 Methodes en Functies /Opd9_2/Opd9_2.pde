@@ -1,27 +1,45 @@
-int xWaarde;
-int yWaarde;
+
+
+
+
+
+
+
+
 
 void setup(){
-  size(500,500);
-  frameRate(10);
-  xWaarde = 0;
-  yWaarde = 0;
+  Getalgem(10,20);
+  Getalgem(15,45);
 }
 
 void draw(){
-  background(0,0,0);
-  rect(xWaarde, yWaarde, 10, 10);
-  
-  xWaarde++;
-  yWaarde+=10;
-  
-  if(yWaarde > height){
-    yWaarde = 0;
-  }
-  
-  if(xWaarde > width){
-    xWaarde = 0;
-  }
-  
-  //rect(xWaarde, yWaarde, 10, 10);
+
 }
+
+void Getalgem(int getal1, int getal2){
+
+  int antwoord;
+  
+  antwoord = (getal1 + getal2)/2;
+  
+  println(antwoord);
+}
+
+
+
+
+
+
+
+//void setup(){
+//  mijnFunctie("Burak", 21);
+//}
+
+
+//void draw(){
+
+//}
+
+//void mijnFunctie(int getal1, int getal2){
+//println(naam + leeftijd);
+//}
