@@ -16,7 +16,8 @@ void setup(){
         .setText("Naam")
         .setSize(200,50)
         .setPosition(200,200)
-        .setCaptionLabel("");
+        .setCaptionLabel("")
+        .setAutoClear(false);
   
   knop1 = cp.addButton("Knop1")
           .setCaptionLabel("Welkom");
