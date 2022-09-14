@@ -7,7 +7,7 @@ size(1000,1000);
 
 void draw(){
 background(255,255,255);
-boom(10,10 );
+bos(10,3);
 
 
 }
@@ -17,7 +17,7 @@ void boom(int x, int y){
   rect(x + 200,y + 200,50,150);
   noFill();
   
-  stroke(0,100,0);
+  noStroke();
   
   fill(0,100,0);
   ellipse(x + 223,y + 150,130,130);
@@ -29,4 +29,16 @@ void boom(int x, int y){
   noFill();
 
 
+}
+
+void bos(int rows, int cols){
+ 
+  
+ for(int i = 0; i < rows; i++){
+   for(int j = 0; j < cols; j++){
+   boom(i*75,j*150);
+   }
+  
+ }
+ 
 }
