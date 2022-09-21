@@ -1,5 +1,5 @@
-String[] naam = {};
-int aantal;
+String[] naam = new String[10];
+int aantal = 0;
 boolean scherm = false;
 String a;
 
@@ -38,9 +38,8 @@ void setup(){
 
 
 void draw(){
-  background(255,255,255);
+  //background(255,255,255);
   
-
 }
 
 void Knop1(){
@@ -49,8 +48,22 @@ void Knop1(){
   naam[aantal] = a;
   aantal++;
   
+ 
   
-  println(a);
+  
+  if(aantal==10){  
+    
+     for(int i = 0; i < 10; i++){
+       //println(naam[i]);
+       fill(0,0,0);
+       text("Dit zijn alle namen:" + naam[i],400,10+i*30);
+  
+  }
+    
+    
+    //println(naam[i]);
+  }
+  
   
   
  
