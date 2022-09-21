@@ -1,6 +1,8 @@
 int resultaat;
+int a;
+int b;
 String text;
-//String text2;
+String text2;
 
 import controlP5.*;
 
@@ -17,7 +19,6 @@ Textfield tekstveld2;
 
 void setup(){
   size(800,800);
-  background(255,255,255);
   
   cp = new ControlP5(this);
   
@@ -58,30 +59,74 @@ void setup(){
 
 
 void draw(){
+  background(255,255,255);
+  
+  fill(0,0,0);
+  text(resultaat, 200, 200);
   
 
 }
 
 void Knop1(){
   text = tekstveld1.getText();
-  //text2 = tekstveld2.getText();
+  text2 = tekstveld2.getText();
   
-  resultaat = Integer.valueOf(text);
+  a = int(text);
+  b = int(text2);
   
-  //knop1 = tekstveld1 + tekstveld2;
+  resultaat = a + b;
+  
+  //fill(0,0,0);
+  //text(resultaat, 200, 200);
+  
+  
+  
+  //text = tekstveld1.getText();
+  ////text2 = tekstveld2.getText();
+  
+  //resultaat = Integer.valueOf(text);
+  
+  ////knop1 = tekstveld1 + tekstveld2;
   
   
   
 }
 
 void Knop2(){
-  println("Dit staat er " + tekstveld1.getText());
+  text = tekstveld1.getText();
+  text2 = tekstveld2.getText();
+  
+  a = int(text);
+  b = int(text2);
+  
+  resultaat = a - b;
+  
+  //fill(0,0,0);
+  //text(resultaat, 200, 200);
 }
 
 void Knop3(){
-  println("Dit staat er " + tekstveld1.getText());
+    text = tekstveld1.getText();
+  text2 = tekstveld2.getText();
+  
+  a = int(text);
+  b = int(text2);
+  
+  resultaat = a / b;
+  
+  //fill(0,0,0);
+  //text(resultaat, 200, 200);
 }
 
 void Knop4(){
-  println("Dit staat er " + tekstveld1.getText());
+    text = tekstveld1.getText();
+  text2 = tekstveld2.getText();
+  
+  a = int(text);
+  b = int(text2);
+  
+  resultaat = a * b;
+  
+  //fill(0,0,0);
+  //text(resultaat, 200, 200);
 }
