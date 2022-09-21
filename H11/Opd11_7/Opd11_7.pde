@@ -1,6 +1,7 @@
-String[] Naam = {};
-int aantalKlik;
+String[] naam = {};
+int aantal;
 boolean scherm = false;
+String a;
 
 
 
@@ -43,10 +44,15 @@ void draw(){
 }
 
 void Knop1(){
-    
-  for(int i = 0; i < 10; i++){
   
-  }
+  a = tekstveld1.getText();
+  naam[aantal] = a;
+  aantal++;
+  
+  
+  println(a);
+  
+  
  
   
 }
