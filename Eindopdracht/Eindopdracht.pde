@@ -1,5 +1,5 @@
-String[] boodschappen;
-int aantal = 0;
+String[] boodschappen = new String[18];
+int aantal;
 String a;
 
 
@@ -10,27 +10,45 @@ ControlP5 cp;
 
 Button knop1;
 
+//Button knop2;
+
 Textfield tekstveld1;
+
+
 
 void setup(){
   
   size(800,800);
   background(255,255,255);
   
- 
+  fill(0,0,0);
+  textSize(20);
+  text("Boodschappenlijst", 310,80);
+  noFill();
+  strokeWeight(3);
+  rect(195, 50, 400, 700, 20);
+  line(195, 190, 595, 190);
+  
   cp = new ControlP5(this);
   
   knop1 = cp.addButton("Knop1")
           .setCaptionLabel("Enter")
-          .setPosition(480,100)
+          .setPosition(470,100)
           .setSize(50,50);
+          
+          
+  //knop2 = cp.addButton("Knop2")
+  //        .setCaptionLabel("Verwijder")
+  //        .setPosition(530,100)
+  //        .setSize(50,50);
   
   tekstveld1 = cp
                 .addTextfield("TextInput1")
                 .setPosition(250,100)
+                .setColorBackground(color(0,0,0))
                 //.setText("typ hier je naam")
-                .setCaptionLabel("Type iets!")
-                .setColorLabel(color(255,0,0))
+                .setCaptionLabel("Hier kan je je boodschappen toevoegen")
+                .setColorLabel(color(0,0,0))
                 .setSize(200,50);
                 
                 
@@ -40,6 +58,22 @@ void setup(){
 
 
 void draw(){
+  noFill();
+  for(int i = 0; i < 18; i++){
+  rect(210,i * 30 + 200,20,20);
+//}else if (rect){
+//fill(0,0,0);
+}
+
+
+
+//  fill(0,0,0);
+//  textSize(20);
+//  text("Boodschappenlijst", 310,80);
+//  noFill();
+//  strokeWeight(3);
+//  rect(195, 50, 400, 700, 20);
+//  line(195, 190, 595, 190);
  
   
 }
@@ -53,10 +87,51 @@ void Knop1(){
  
   
   
+  if(aantal>=1){  
+    
+     for(int i = 0; i < boodschappen.length; i++){
+       fill(0,0,0);
+       text(boodschappen[i],270,218+i*30);
+  
+  }
+    
+    
+    
+  }
+  
+}
 
+
+void mousePressed(){
+  
+  line(mouseX + 7, mouseY - 7, mouseX - 7, mouseY + 7);
+  line(mouseX - 7, mouseY - 7, mouseX + 7, mouseY + 7);
   
   
+
+
+
+}
+
+
+//void Knop2(){
+//  boodschappen[aantal] = a;
+//  aantal--;
   
  
   
-}
+  
+//  if(aantal > 1){  
+    
+//     for(int i = 0; i <= 18; i--){
+//       fill(255,255,255);
+//       text(boodschappen[i],270,218+i*30);
+       
+  
+//  }
+    
+    
+    
+//  }
+  
+//}
