@@ -12,6 +12,8 @@ ControlP5 cp;
 
 Button knop1;
 
+Button knop2;
+
 Textfield tekstveld1;
 
 
@@ -21,19 +23,33 @@ void setup(){
   size(800,800);
   background(255,255,255);
   
+  //text for shoppinglist
   fill(0,0,0);
   textSize(20);
   text("Boodschappenlijst", 310,80);
   noFill();
+  
+  //layout shoppinglist
   strokeWeight(3);
   rect(195, 50, 400, 700, 20);
   line(195, 190, 595, 190);
+  noFill();
+  
+  
+  for(int i = 0; i < rows; i++){
+  rect(210,i * 30 + 200,20,20);
+  }
   
   cp = new ControlP5(this);
   
   knop1 = cp.addButton("Knop1")
           .setCaptionLabel("Enter")
           .setPosition(470,100)
+          .setSize(50,50);
+          
+  knop2 = cp.addButton("Knop2")
+          .setCaptionLabel("Reset")
+          .setPosition(530,100)
           .setSize(50,50);
          
   tekstveld1 = cp
@@ -52,9 +68,9 @@ void setup(){
 
 
 void draw(){
-  noFill();
-  for(int i = 0; i < rows; i++){
-  rect(210,i * 30 + 200,20,20);
+  //noFill();
+  //for(int i = 0; i < rows; i++){
+  //rect(210,i * 30 + 200,20,20);
 
 }
 
@@ -63,7 +79,7 @@ void draw(){
 
  
   
-}
+
 
 void Knop1(){
   
@@ -87,6 +103,15 @@ void Knop1(){
 
   
 }
+
+
+void Knop2(){
+  stroke(255,255,255);
+  fill(255,255,255);
+  rect(250,200,300,535);
+}
+
+
 
 
 
