@@ -1,6 +1,8 @@
 String[] boodschappen = new String[18];
 int aantal;
 String a;
+int rows = 18;
+
 
 
 
@@ -9,8 +11,6 @@ import controlP5.*;
 ControlP5 cp;
 
 Button knop1;
-
-//Button knop2;
 
 Textfield tekstveld1;
 
@@ -35,13 +35,7 @@ void setup(){
           .setCaptionLabel("Enter")
           .setPosition(470,100)
           .setSize(50,50);
-          
-          
-  //knop2 = cp.addButton("Knop2")
-  //        .setCaptionLabel("Verwijder")
-  //        .setPosition(530,100)
-  //        .setSize(50,50);
-  
+         
   tekstveld1 = cp
                 .addTextfield("TextInput1")
                 .setPosition(250,100)
@@ -59,21 +53,14 @@ void setup(){
 
 void draw(){
   noFill();
-  for(int i = 0; i < 18; i++){
+  for(int i = 0; i < rows; i++){
   rect(210,i * 30 + 200,20,20);
-//}else if (rect){
-//fill(0,0,0);
+
 }
 
 
 
-//  fill(0,0,0);
-//  textSize(20);
-//  text("Boodschappenlijst", 310,80);
-//  noFill();
-//  strokeWeight(3);
-//  rect(195, 50, 400, 700, 20);
-//  line(195, 190, 595, 190);
+
  
   
 }
@@ -93,45 +80,23 @@ void Knop1(){
        fill(0,0,0);
        text(boodschappen[i],270,218+i*30);
   
+    }
   }
     
     
-    
-  }
+
   
 }
 
 
-void mousePressed(){
+
+//void mousePressed(){
   
-  line(mouseX + 7, mouseY - 7, mouseX - 7, mouseY + 7);
-  line(mouseX - 7, mouseY - 7, mouseX + 7, mouseY + 7);
+//  line(mouseX + 7, mouseY - 7, mouseX - 7, mouseY + 7);
+//  line(mouseX - 7, mouseY - 7, mouseX + 7, mouseY + 7);
   
   
 
 
 
-}
-
-
-//void Knop2(){
-//  boodschappen[aantal] = a;
-//  aantal--;
-  
- 
-  
-  
-//  if(aantal > 1){  
-    
-//     for(int i = 0; i <= 18; i--){
-//       fill(255,255,255);
-//       text(boodschappen[i],270,218+i*30);
-       
-  
-//  }
-    
-    
-    
-//  }
-  
 //}
