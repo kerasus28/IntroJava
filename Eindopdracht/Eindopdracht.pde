@@ -107,11 +107,23 @@ void Knop2(){
   stroke(255,255,255);
   fill(255,255,255);
   rect(250,200,300,535);
+  for(int i = 0; i < boodschappen.length; i++){
+ boodschappen[i]=""; 
+ aantal=0;
+}
 }
 
 
+void keyPressed(){
+  //println(keyCode);
+//if(key == 40);
 
 
+//for(int i = 0; i < boodschappen.length; i++){
+// boodschappen[i]=""; 
+// aantal=0;
+//}
+}
 
 //void mousePressed(){
   
