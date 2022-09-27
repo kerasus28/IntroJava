@@ -21,18 +21,19 @@ Textfield tekstveld1;
 void setup(){
   
   size(800,800);
-  background(255,255,255);
+  background(128,128,128);
+  
+  //layout shoppinglist
+  strokeWeight(3);
+  fill(255,255,255);
+  rect(195, 50, 400, 700, 20);
+  line(195, 190, 595, 190);
+  noFill();
   
   //text for shoppinglist
   fill(0,0,0);
   textSize(20);
   text("Boodschappenlijst", 310,80);
-  noFill();
-  
-  //layout shoppinglist
-  strokeWeight(3);
-  rect(195, 50, 400, 700, 20);
-  line(195, 190, 595, 190);
   noFill();
   
   
@@ -68,9 +69,6 @@ void setup(){
 
 
 void draw(){
-  //noFill();
-  //for(int i = 0; i < rows; i++){
-  //rect(210,i * 30 + 200,20,20);
 
 }
 
